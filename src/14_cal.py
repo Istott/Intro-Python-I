@@ -30,3 +30,22 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+#date time expects an integer
+#.Calendar(firstweeday=0)
+
+#note: check argv, and others 
+argv_length = len(sys.argv)
+# sys.argv.__len__()
+
+#   - if no input, 
+#       default to todays date. print method datetime.now().month and another with year.
+#   - elif one input, 
+#        its going to be the month and were going to use the current year. 
+#   - elif two inputs, 
+#        the first will be the month, 2nd will be the year. will use those for the calendar.
+#   - else more than two inputs, 
+#        send error message.
+
+
+

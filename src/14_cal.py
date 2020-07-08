@@ -35,8 +35,8 @@ from datetime import datetime
 #.Calendar(firstweeday=0)
 
 #note: check argv, and others 
-argv_length = len(sys.argv)
-# sys.argv.__len__()
+# argv_length = len(sys.argv)
+sys.argv.__len__()
 
 #   - if no input, 
 #       default to todays date. print method datetime.now().month and another with year.
@@ -47,5 +47,15 @@ argv_length = len(sys.argv)
 #   - else more than two inputs, 
 #        send error message.
 
+what_month = input("what month?: ")
+what_year = input("what year?: ")
 
+if not what_month and not what_year:
+    print('Today date: ', datetime.now().month, datetime.now().year)
+elif what_month and not what_year:
+    print('Your date is: ', what_month, datetime.now().year)
+elif what_month and what_year:
+    print('Your date is: ', what_month, what_year)
+else:
+    print("please put in the correct date")
 

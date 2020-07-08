@@ -36,7 +36,7 @@ from datetime import datetime
 
 #note: check argv, and others 
 # argv_length = len(sys.argv)
-sys.argv.__len__()
+# sys.argv.__len__()
 
 #   - if no input, 
 #       default to todays date. print method datetime.now().month and another with year.
@@ -47,15 +47,37 @@ sys.argv.__len__()
 #   - else more than two inputs, 
 #        send error message.
 
-what_month = input("what month?: ")
-what_year = input("what year?: ")
+num_args = len(sys.argv)
 
-if not what_month and not what_year:
-    print('Today date: ', datetime.now().month, datetime.now().year)
-elif what_month and not what_year:
-    print('Your date is: ', what_month, datetime.now().year)
-elif what_month and what_year:
-    print('Your date is: ', what_month, what_year)
+if num_args == 1:
+  month = datetime.now().month
+  year = datetime.now().year
+
+elif num_args == 2:
+  year = datetime.now().year
+  month = int(sys.argv[1])
+
+elif num_args == 3:
+  year = datetime.now().year
+  month = int(sys.argv[1])
+
 else:
-    print("please put in the correct date")
+  print("usage: 14_cal.py [month] [year]")
+
+  sys.exit(1)
+
+cal = calendar.TextCalendar()
+cal.prmonth(year, month)
+
+# what_month = input("what month?: ")
+# what_year = input("what year?: ")
+
+# if not what_month and not what_year:
+#     print('Today date: ', datetime.now().month, datetime.now().year)
+# elif what_month and not what_year:
+#     print('Your date is: ', what_month, datetime.now().year)
+# elif what_month and what_year:
+#     print('Your date is: ', what_month, what_year)
+# else:
+#     print("please put in the correct data")
 

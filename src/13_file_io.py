@@ -13,6 +13,7 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 text_file = open("foo.txt", "r")
 print(text_file.read())
+text_file.close()
 
 # print(read_contents())
 
@@ -23,11 +24,14 @@ print(text_file.read())
 
 # YOUR CODE HERE
 def make_bar():
-    a = 'what the heck '
+    a = 'what the flip '
     b = 'is going on '
     c = 'in here'
+    d = '!!!!'
 
     bar_file = open("bar.txt", "w")
-    bar_file.write( a + b + c )
+    bar_file.write(f'{a} \n{b} \n{c}{d} ')
     bar_file.close()
+
+make_bar()
 

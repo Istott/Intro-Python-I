@@ -10,16 +10,18 @@ def is_even(n):
 
 # Read a number from the keyboard
 num = input("Enter a number: ")
-num = int(num)
+n = int(num)
 
 # Print out "Even!" if the number is even. Otherwise print "Odd"
 
 # YOUR CODE HERE
 
+# print(is_even(n))
 
-if is_even == True:
-    print("Even!")
+
+if is_even(n) == True:
+    print(f"{num} is an even number")
 else:
-    print("Odd")
+    print(f"{num} is an odd number")
 
 

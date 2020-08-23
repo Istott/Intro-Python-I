@@ -66,12 +66,3 @@ latitude = [v["lat"] for v in waypoints]
 longitude = [v["lon"] for v in waypoints]
 
 print(f"Lat values are {latitude}, and lon values are {longitude}")
-
-# print([v["lat"] and v["lon"] for v in waypoints])
-# for v in waypoints[2].values():
-#     print(v)
-
-# print(waypoints[0].values())
-
-# for v in waypoints
-# print(waypoints("lat".values()))
